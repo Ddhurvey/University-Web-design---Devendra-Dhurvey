@@ -1,0 +1,84 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+header nav {
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    height: fit-content;
+}
+
+header nav img {
+    height: 5rem;
+    width:6rem;
+    object-fit:cover;
+}
+
+.navigation-btn {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+.navigation-btn a {
+    text-decoration: none;
+
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+
+@media (max-width:768px) {
+
+    /* Navigation Bar */
+    header nav {
+        background-color: green;
+    }
+
+    header nav img {
+        height: 4rem;
+        width: auto;
+        margin-right: 2rem;
+    }
+
+    .navigation-btn {
+        gap: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .navigation-btn a {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width:425px) {
+    header nav {
+        background-color: pink;
+        padding-inline: .3rem;
+    }
+
+    header nav img {
+        height: 2.5rem;
+        width: auto;
+    }
+
+    .navigation-btn {
+        gap: .5rem;
+    }
+
+    .navigation-btn a {
+        font-size: .7rem;
+    }
+}
+
