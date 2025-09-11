@@ -8,12 +8,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body {
-    background: url(https://images.unsplash.com/20/cambridge.JPG?q=80&w=847&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+.main {
+    background: url("https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?_gl=1*86exfu*_ga*NjI0OTM1NTMuMTc1NzU4Mjg3Mw..*_ga_8JE65Q40S6*czE3NTc1ODI4NzMkbzEkZzEkdDE3NTc1ODI5MzgkajYwJGwwJGgw");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+    background-size: 100%;
+    height:140vh;    
 }
 
 .main-page-containt {
@@ -39,20 +38,20 @@ body {
     line-height: 1.5rem;
 }
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 88vh;
 }
 
 header {
-    position: sticky;
+    position: fixed;
+    width:100vw;
     top: 0;
     backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.123);
-    box-shadow: 0px 0px 20px rgba(240, 245, 247, 0.932);
+    /* box-shadow: 0px 0px 20px rgba(240, 245, 247, 0.932); */
 }
 
 header nav {
@@ -99,6 +98,12 @@ header nav img {
         margin-right: 2rem;
     }
 
+    .main {
+        height:95vh;
+        background-size: cover;
+
+    }
+
     .navigation-btn {
         gap: 1rem;
         justify-content: space-evenly;
@@ -108,11 +113,10 @@ header nav img {
         font-size: 0.97rem;
     }
 
-    /* main page containt */
+    /* .main page containt */
     .main-page-containt {
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         text-align: center;
         gap: 2rem;
@@ -138,6 +142,9 @@ header nav img {
         width: 100%;
     }
 
+    .main {
+        height:65vh;
+    }
     /* navigation baar */
     header nav {
         /* background-color: pink; */
@@ -157,25 +164,33 @@ header nav img {
         font-size: .49rem;
     }
 
-    /* main page containt */
+    /* .main page containt */
     .main-page-containt {
-        gap: 1rem;
         margin-inline: 1rem;
         flex-direction: column;
-        height: 200vh;
         line-height: 1rem;
         margin-block: 2rem;
-        row-gap: 2rem;
     }
 
     .main-page-containt h1 {
         font-size: 0.9rem;
-        
+        /* color:black; */
 
     }
 
     .main-page-containt p {
         font-size: 0.5rem;
+        /* color: black; */
         line-height: 0.6rem;
+    }
+}
+@media (max-width:375px) {
+    .main{
+        height: 55vh;
+    }
+}
+@media (max-width:320px) {
+    .main {
+        height:45vh;
     }
 }
