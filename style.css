@@ -42,7 +42,7 @@ header nav img {
 
     /* Navigation Bar */
     header nav {
-        background-color: green;
+        /* background-color: green; */
     }
 
     header nav img {
@@ -64,7 +64,7 @@ header nav img {
 
 @media (max-width:425px) {
     header nav {
-        background-color: pink;
+        /* background-color: pink; */
         padding-inline: .3rem;
     }
 
