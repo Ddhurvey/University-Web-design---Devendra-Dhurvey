@@ -106,7 +106,17 @@ header nav img {
     font-size: 1rem;
 }
 
+.course-container h2{
+    text-align: center;
+    line-height: 3rem;
+    color: #FD0003;
 
+}
+.course-container p{
+    text-align: center;
+    line-height: 3rem;
+    
+}
 
 @media (max-width:768px) {
 
