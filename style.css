@@ -123,7 +123,7 @@ header nav img {
 .course-container p {
     text-align: center;
     line-height: 3rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
     color: white;
     margin-bottom: 1rem;
@@ -137,8 +137,8 @@ header nav img {
 }
 
 .course-block {
-    background-color: rgba(255, 228, 196, 0.603);
-    text-align:start;
+    background-color: rgba(163, 148, 131, 0.603);
+    text-align: start;
     line-height: 2rem;
     border: 1px solid white;
     border-radius: 1.5rem;
@@ -146,23 +146,86 @@ header nav img {
     width: 30%;
     margin: 0 auto;
     padding: 2rem;
+    transition: scale 0.2s ease-in;
 }
-.course-block p{
+
+/* animations in all blocks */
+.course-block:hover {
+    scale: 0.95;
+}
+
+.course-block p {
     text-align: justify;
     line-height: 1.4rem;
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.981);
 }
-.course-block h2{
+
+.course-block h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color:whitesmoke;
+    color: whitesmoke;
     text-decoration: underline #fff34b 2px;
 }
-.course-block h4{
+
+.course-block h4 {
     font-size: 0.95rem;
     color: whitesmoke;
 }
+
+/* global campus sections */
+.global-campus-container {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.global-campus-container h1 {
+    margin-block: 2rem;
+    color: #fff34b;
+}
+
+.global-campus-container p {
+    line-height: 1.5rem;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding-inline: 1.5rem;
+}
+
+.campus-container-child {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+}
+
+.campus-img {
+    width: 30%;
+    height: 15rem;
+    border: 1px solid white;
+}
+
+.campus-img1 {
+    background: url("https://images.unsplash.com/photo-1637766554705-dd30a0e2b15d?q=80&w=1624&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.campus-img2 {
+    background: url("https://images.unsplash.com/photo-1689773271095-7cfc4c1b5340?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.campus-img3 {
+    background: url("https://images.unsplash.com/photo-1663335818840-4b99858adace?q=80&w=826&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
 
 
 @media (max-width:768px) {
@@ -211,13 +274,27 @@ header nav img {
         font-size: 0.9rem;
         line-height: 1.2rem;
     }
+
     /* course container */
-    .course-container-child{
+    .course-container-child {
         flex-direction: column;
-        flex-shrink:auto;
+        flex-shrink: auto;
     }
-    .course-block{
+
+    .course-block {
         width: 90%;
+    }
+
+    /* campus section */
+
+    .campus-container-child{
+        flex-direction: column;
+    }
+    .campus-img {
+        width: 90%;
+        height: 20rem;
+        border: 1px solid white;
+        margin: 0 auto;
     }
 }
 
@@ -271,6 +348,18 @@ header nav img {
         font-size: 0.5rem;
         /* color: black; */
         line-height: 0.6rem;
+    }
+
+    /* images of campus */
+    .campus-container-child {
+        flex-direction: column;
+    }
+
+    .campus-img {
+        width: 90%;
+        height: 10rem;
+        border: 1px solid white;
+        margin: 0 auto;
     }
 }
 
