@@ -203,6 +203,7 @@ header nav img {
     width: 30%;
     height: 15rem;
     border: 1px solid white;
+    transition: scale .4s ease;
 }
 
 .campus-img1 {
@@ -223,7 +224,9 @@ header nav img {
     background-repeat: no-repeat;
 }
 
-
+.campus-img:hover{
+    scale: 1.1;
+}
 
 
 
