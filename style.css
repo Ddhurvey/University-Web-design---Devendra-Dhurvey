@@ -171,7 +171,7 @@ header nav img {
     margin-bottom: 1.2rem;
     font-size: 1.5rem;
     color: black;
-    text-decoration:2px underline #fff34b ;
+    text-decoration: 2px underline #fff34b;
 }
 
 .course-block h4 {
@@ -237,11 +237,39 @@ header nav img {
     background-repeat: no-repeat;
 }
 
-.campus-img:hover{
+.campus-img:hover {
     scale: 1.1;
 }
 
+/* Our facilitiess container */
+.our-facilities-container h1 {
+    margin-block: 2rem;
+    color: black;
+    font-weight: 700;
+    text-decoration: underline #fff34b 2px;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+}
 
+.our-facilities-container p {
+    line-height: 1.5rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-inline: 1.5rem;
+}
+.our-facilities-child{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+.card{
+    z-index: -1;
+    flex-grow: fit-content;
+}
 
 
 @media (max-width:768px) {
@@ -303,9 +331,10 @@ header nav img {
 
     /* campus section */
 
-    .campus-container-child{
+    .campus-container-child {
         flex-direction: column;
     }
+
     .campus-img {
         width: 90%;
         height: 20rem;
