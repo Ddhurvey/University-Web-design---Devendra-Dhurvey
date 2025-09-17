@@ -67,7 +67,7 @@ header {
 header nav {
     display: flex;
     background-color: transparent;
-
+    max-width: 1024px;
     justify-content: space-between;
     padding-inline: 2rem;
     height: fit-content;
@@ -462,13 +462,14 @@ header nav img {
         padding-block: 2rem;
         text-align:justify;
         padding-inline: 1rem;
-        width: 30rem;
+        max-width: 23.5rem;
+        margin: 0 auto;
     }
     .our-facilities-container {
         padding-block: 2rem;
         text-align:justify;
         padding-inline: 1rem;
-        width: 30rem;
+        max-width:23.5rem;
     }
 }
 
