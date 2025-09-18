@@ -370,6 +370,36 @@ header {
 
 .student-reviews-child {
     display: grid;
+    gap: 2rem;
+    /* space between reviews */
+    padding: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /* smaller min size */
+}
+
+.review {
+    background-color: firebrick;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.review img {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: inline;
+}
 
 .review h4 {
     display: flex;
