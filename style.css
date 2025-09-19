@@ -325,10 +325,14 @@ header {
     z-index: 0;
     flex-grow: 1;
 }
+.card li{
+    line-height: 1rem;
+}
 
 .card h5 {
     font-weight: 600;
     text-align: center;
+    line-height: 0.6rem;
 }
 
 .card img {
@@ -381,8 +385,8 @@ header {
     background-color: white;
     border: 1px solid rgba(245, 222, 179, 0.664);
     border-radius: 0.7rem;
-    padding: 1.5rem;
-    margin: 0 auto;
+    padding: 2rem;
+    margin-inline: 0.5rem;
     color: black;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
@@ -409,14 +413,14 @@ header {
 
 .review p {
     text-align: justify;
-    line-height: 1.1rem;
+    line-height: 0.5rem;
     font-size: 0.8rem;
     display: inline;
 }
 
 .review .rating {
     display: flex;
-    place-self: flex-start;
+    place-self: center;
 }
 
 @media (max-width:768px) {
