@@ -1,12 +1,19 @@
-/* Import google fonts */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box !important;
     font-family: "Montserrat", sans-serif;
+}
 
+body {
+    background-color: #373e42b9 !important;
+    /* background-color: rgba(0, 0, 0, 0.877) !important; */
+    /* width: 100vw !important; */
+    /* margin: 0 !important; */
 }
 
 .wrap-container {
@@ -14,25 +21,84 @@
     margin: 0 auto;
 }
 
-body {
-    background-color: #373e42b9 !important;
-    /* background-color: rgba(0, 0, 0, 0.877) !important; */
-    /* width:100vw !important;
-    margin:0 !important; */
+/* Header Styles */
+header {
+    position: fixed;
+    max-width: 1024px;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(7px);
+    background-color: rgba(236, 234, 234, 0.164);
+    width: 100vw !important;
+    margin: 0 auto !important;
+    /* box-shadow: 0px 0px 20px rgba(240, 245, 247, 0.932); */
 }
 
+header nav {
+    display: flex;
+    background-color: transparent;
+    max-width: 1024px !important;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    height: fit-content;
+    margin: 50% 50%;
+}
+
+header nav img {
+    height: 5rem;
+    width: 6rem;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+.navigation-btn {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.navigation-btn a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 1rem;
+}
+
+header nav div a::after {
+    transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    width: 0%;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+}
+
+header nav div a:hover::after {
+    width: 100%;
+}
+
+nav {
+    margin: 0 !important;
+}
+
+/* Main Section */
 .main {
-    /* background:linear-gradient(rgba(0, 0, 0, 0.658)), url("https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?_gl=1*86exfu*_ga*NjI0OTM1NTMuMTc1NzU4Mjg3Mw..*_ga_8JE65Q40S6*czE3NTc1ODI4NzMkbzEkZzEkdDE3NTc1ODI5MzgkajYwJGwwJGgw"); */
     background: linear-gradient(rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/flagged/photo-1554473675-d0904f3cbf38?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    /* background: linear-gradient(rgba(0, 0, 0, 0.658)), url("https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?_gl=1*86exfu*_ga*NjI0OTM1NTMuMTc1NzU4Mjg3Mw..*_ga_8JE65Q40S6*czE3NTc1ODI4NzMkbzEkZzEkdDE3NTc1ODI5MzgkajYwJGwwJGgw"); */
     background-repeat: no-repeat;
     background-size: 100%;
     height: 42rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-page-containt {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     text-align: center;
     row-gap: 3rem;
@@ -43,7 +109,6 @@ body {
     font-size: 3rem;
     font-weight: 600;
     color: #FFFFFF;
-
 }
 
 .main-page-containt p {
@@ -53,15 +118,7 @@ body {
     font-weight: 500;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
+/* Button Styles */
 button {
     --green: #1BFD9C;
     font-size: 15px;
@@ -99,82 +156,51 @@ button:hover:before {
     transform: translateX(15em);
 }
 
-
-
-
-
-
-
-
-
-
-header {
-    position: fixed;
-    max-width: 1024px;
-    /* width: 100vw; */
-    top: 0;
-    z-index: 1;
-    backdrop-filter: blur(7px);
-    background-color: rgba(236, 234, 234, 0.164);
-    /* box-shadow: 0px 0px 20px rgba(240, 245, 247, 0.932); */
-}
-
-header nav {
-    display: flex;
-    background-color: transparent;
-    max-width: 1024px !important;
-    justify-content: space-between;
-    padding-inline: 2rem;
-    height: fit-content;
-    margin: 50% 50%;
-}
-
-/* Animations in icon of navigation bar */
-header nav div a::after {
-    transition: all 0.5s ease;
-    content: "";
-    position: absolute;
-    height: 1.5px;
-    width: 0%;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-}
-
-header nav div a:hover::after {
-    width: 100%;
-}
-
-
-
-header nav img {
-    height: 5rem;
-    width: 6rem;
-    object-fit: cover;
-    background-color: transparent;
-}
-
-.navigation-btn {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-}
-
-
-.navigation-btn a {
-    text-decoration: none;
-    position: relative;
+.button {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #1875FF;
     color: white;
-    font-size: 1rem;
+    font-family: inherit;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0px 14px 56px -11px #1875FF;
+    width: 10em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
 }
 
-nav {
-    margin: 0 !important;
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
 }
 
-header {
-    width: 100vw !important;
-    margin: 0 auto !important;
+.button span:after {
+    content: 'Now';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+}
+
+.button:hover span {
+    padding-right: 3.55em;
+}
+
+.button:hover span:after {
+    opacity: 4;
+    right: 0;
+}
+
+/* Course Section */
+.course-container {
+    padding-inline: 1rem;
+    padding-block: 3rem;
 }
 
 .course-container h1 {
@@ -182,19 +208,12 @@ header {
     line-height: 1.5rem;
     font-weight: 700;
     color: black;
-    /* background-color: rgba(255, 255, 255, 0.144); */
-    /* box-shadow: 0 0 .5px white; */
-
     border-bottom: 5px solid #fff34b;
     width: max-content;
     margin: 0 auto;
     padding-bottom: 0.5rem;
-
-}
-
-.course-container {
-    padding-inline: 1rem;
-    padding-block: 3rem;
+    /* background-color: rgba(255, 255, 255, 0.144); */
+    /* box-shadow: 0 0 .5px white; */
 }
 
 .course-container p {
@@ -211,11 +230,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
-    /* justify-content: space-evenly; */
 }
 
 .course-block {
-    /* background-color: rgba(163, 148, 131, 0.603); */
     background-color: rgba(245, 245, 245, 0.664);
     text-align: start;
     line-height: 1.5rem;
@@ -226,22 +243,12 @@ header {
     margin: 0 auto;
     padding: 1rem;
     transition: scale 0.2s ease-in;
+    /* background-color: rgba(163, 148, 131, 0.603); */
 }
 
-
-/* animations in all blocks */
 .course-block:hover {
-    /* scale: 0.95; */
     background-color: rgba(255, 255, 255, 0.89);
-
-}
-
-
-.course-block p {
-    text-align: justify;
-    line-height: .9rem;
-    font-size: 0.75rem;
-    color: rgba(0, 0, 0, 0.981);
+    /* scale: 0.95; */
 }
 
 .course-block h2 {
@@ -253,9 +260,11 @@ header {
     text-decoration: 2px underline #fff34b;
 }
 
-.course-block li {
-    line-height: 0.5rem;
+.course-block p {
     text-align: justify;
+    line-height: .9rem;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.981);
 }
 
 .course-block h4 {
@@ -264,7 +273,12 @@ header {
     color: black;
 }
 
-/* global campus sections */
+.course-block li {
+    line-height: 0.5rem;
+    text-align: justify;
+}
+
+/* Global Campus Section */
 .global-campus-container {
     padding-block: 2rem;
     text-align: center;
@@ -275,12 +289,10 @@ header {
     margin-block: 2rem;
     color: black;
     font-weight: 700;
-
     text-decoration: underline #fff34b 2px;
     width: max-content;
     margin: 0 auto;
     margin-bottom: 1.2rem;
-
 }
 
 .global-campus-container p {
@@ -295,7 +307,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
-
 }
 
 .campus-img {
@@ -306,13 +317,8 @@ header {
 }
 
 .campus-img:hover {
-    /* scale: 1.1;     */
+    /* scale: 1.1; */
     background-size: 120%;
-}
-
-.campus-img1:hover {
-    /* scale: 1.1;     */
-    background-size: zoom(10px);
 }
 
 .campus-img1 {
@@ -320,7 +326,11 @@ header {
     background-size: 115%;
     background-repeat: no-repeat;
     background-position: center;
+}
 
+.campus-img1:hover {
+    /* scale: 1.1; */
+    background-size: zoom(10px);
 }
 
 .campus-img2 {
@@ -335,11 +345,9 @@ header {
     background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
-
-/* Our facilitiess container */
+/* Our Facilities Section */
 .our-facilities-container {
     padding: 5rem;
 }
@@ -388,15 +396,13 @@ header {
 .card img {
     filter: grayscale(80%);
     transition: all 0.5s ease;
-
 }
 
-/* hover on images */
 .card img:hover {
     filter: grayscale(0%);
 }
 
-/* Students Reviews container */
+/* Student Reviews Section */
 .student-reviews-container h1 {
     margin-block: 2rem;
     color: black;
@@ -408,27 +414,11 @@ header {
     text-align: center;
 }
 
-/* .student-reviews-child{
-    display: grid;
-    padding: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-}
-.review{
-    background-color: firebrick;
-    border: 1px solid white;
-    width: 20rem;
-    height: 10rem;
-    border-radius: 1rem;
-    padding: 1rem;
-} */
-
 .student-reviews-child {
     display: grid;
     gap: 2rem;
-    /* space between reviews */
     padding: 5rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    /* smaller min size */
 }
 
 .review {
@@ -446,7 +436,6 @@ header {
     transform: translateY(-6px);
     box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.6);
 }
-
 
 .review img {
     border-radius: 50%;
@@ -473,12 +462,9 @@ header {
     place-self: center;
 }
 
-/* enroll container */
-
+/* Enroll Section */
 .enroll-container {
-    background:
-        linear-gradient(to top, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.2)),
-        url("https://wallpapercave.com/uwp/uwp4209824.jpeg") no-repeat center center / cover;
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.2)), url("https://wallpapercave.com/uwp/uwp4209824.jpeg") no-repeat center center / cover;
     height: 60vh;
     margin: 0.9rem;
     border-radius: 0.5rem;
@@ -490,6 +476,14 @@ header {
     padding: 1rem;
     flex-direction: column;
     align-items: center;
+}
+
+.enroll-container h1 {
+    text-shadow: 2px 0px 10px rgba(34, 30, 30, 0.479);
+}
+
+.enroll-container a {
+    text-align: center;
 }
 
 .enroll-button {
@@ -509,65 +503,12 @@ header {
 
 .enroll-button:hover {
     box-shadow: 5px 5px 20px green;
-    transform: rotateY()
+    transform: rotateY();
 }
 
-.enroll-container a {
-    text-align: center;
-}
-
-.enroll-container h1 {
-    text-shadow: 2px 0px 10px rgba(34, 30, 30, 0.479);
-}
-
-
-/* button */
-
-.button {
-    display: inline-block;
-    border-radius: 7px;
-    border: none;
-    background: #1875FF;
-    color: white;
-    font-family: inherit;
-    text-align: center;
-    font-size: 13px;
-    box-shadow: 0px 14px 56px -11px #1875FF;
-    width: 10em;
-    padding: 1em;
-    transition: all 0.4s;
-    cursor: pointer;
-}
-
-.button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.4s;
-}
-
-.button span:after {
-    content: 'Now';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.7s;
-}
-
-.button:hover span {
-    padding-right: 3.55em;
-}
-
-.button:hover span:after {
-    opacity: 4;
-    right: 0;
-}
-
+/* Contact Section */
 .contact-container {
-    background:
-        linear-gradient(to top, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.2)),
-        url("https://github.com/Ddhurvey/University-Web-design---Devendra-Dhurvey/blob/main/eduford_img/background.jpg?raw=true") no-repeat center center / cover;
+    background: linear-gradient(to top, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.2)), url("https://github.com/Ddhurvey/University-Web-design---Devendra-Dhurvey/blob/main/eduford_img/background.jpg?raw=true") no-repeat center center / cover;
     height: 60vh;
     margin: 0.9rem;
     display: flex;
@@ -578,7 +519,6 @@ header {
     padding: 1rem;
     flex-direction: column;
     align-items: center;
-
 }
 
 .contact-container a {
@@ -586,11 +526,7 @@ header {
     text-decoration: none;
 }
 
-
-
-
-
-
+/* Map Section */
 .map {
     position: relative;
     width: 100%;
@@ -610,58 +546,22 @@ header {
     border: none;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .map {
-        margin: 0 0.8rem;  
-        width: auto;     
+        margin: 0 0.8rem;
+        width: auto;
     }
-}
 
-
-
-
-
-
-
-/* Responsive  */
-@media (max-width: 768px) {
     .enroll-container {
         height: 40vh;
         font-size: 0.9rem;
     }
-}
 
-@media (max-width: 480px) {
-    .enroll-container {
-        height: 30vh;
-        font-size: 0.8rem;
-    }
-}
-
-/* Responsive contact us*/
-@media (max-width: 768px) {
     .contact-container {
         height: 40vh;
         font-size: 0.9rem;
     }
-}
-
-@media (max-width: 480px) {
-    .contact-container {
-        height: 30vh;
-        font-size: 0.8rem;
-    }
-}
-
-
-
-@media (max-width:768px) {
-
-    /* Navigation Bar */
-    /* header nav {
-        background-color: green;
-    } */
 
     header nav img {
         height: 4rem;
@@ -672,7 +572,6 @@ header {
     .main {
         height: 95vh;
         background-size: cover;
-
     }
 
     .navigation-btn {
@@ -684,7 +583,6 @@ header {
         font-size: 0.97rem;
     }
 
-    /* .main page containt */
     .main-page-containt {
         display: flex;
         flex-direction: column;
@@ -692,7 +590,6 @@ header {
         text-align: center;
         gap: 2rem;
         margin-inline: 3rem;
-
     }
 
     .main-page-containt h1 {
@@ -704,7 +601,6 @@ header {
         line-height: 1.2rem;
     }
 
-    /* course container */
     .course-container-child {
         flex-direction: column;
         flex-shrink: auto;
@@ -714,8 +610,6 @@ header {
         width: 90%;
         margin: 0 auto;
     }
-
-    /* campus section */
 
     .campus-container-child {
         flex-direction: column;
@@ -750,9 +644,19 @@ header {
     }
 }
 
-@media (max-width:425px) {
+@media (max-width: 480px) {
+    .enroll-container {
+        height: 30vh;
+        font-size: 0.8rem;
+    }
 
-    /* body */
+    .contact-container {
+        height: 30vh;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 425px) {
     body {
         background-size: contain;
         height: 100vh;
@@ -763,9 +667,7 @@ header {
         height: 65vh;
     }
 
-    /* navigation baar */
     header nav {
-        /* background-color: pink; */
         padding-inline: .3rem;
     }
 
@@ -782,7 +684,6 @@ header {
         font-size: .49rem;
     }
 
-    /* .main page containt */
     .main-page-containt {
         margin-inline: 1rem;
         flex-direction: column;
@@ -792,23 +693,18 @@ header {
 
     .main-page-containt h1 {
         font-size: 0.9rem;
-        /* color:black; */
-
     }
 
     .main-page-containt p {
         font-size: 0.5rem;
-        /* color: black; */
         line-height: 0.6rem;
     }
 
-    /* course */
     .course-block {
         width: 90%;
         margin: 0 auto;
     }
 
-    /* images of campus */
     .campus-container-child {
         flex-direction: column;
     }
@@ -820,7 +716,6 @@ header {
         margin: 0 auto;
     }
 
-    /* global campus */
     .global-campus-container {
         padding-block: 2rem;
         text-align: justify;
@@ -836,9 +731,10 @@ header {
         max-width: 26rem;
     }
 
-    /* student reviews */
     .student-reviews-child {
         margin: 0 auto;
+        max-width: 425px;
+        padding-inline: 0.5rem;
     }
 
     .student-reviews-container h1 {
@@ -848,14 +744,9 @@ header {
     .review {
         padding: 0.4rem;
     }
-
-    .student-reviews-child {
-        max-width: 425px;
-        padding-inline: 0.5rem;
-    }
 }
 
-@media (max-width:375px) {
+@media (max-width: 375px) {
     .main {
         height: 55vh;
     }
@@ -880,7 +771,7 @@ header {
     }
 }
 
-@media (max-width:320px) {
+@media (max-width: 320px) {
     .main {
         height: 45vh;
     }
